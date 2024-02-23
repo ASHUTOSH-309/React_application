@@ -1,0 +1,24 @@
+{
+  "name": "namaste_react",
+  "version": "1.0.0",
+  "description": "creating a react application",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/ASHUTOSH-309/React_application"
+  },
+  "keywords": [
+    "jai",
+    "bajrangbali"
+  ],
+  "author": "Ashutosh sharma",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.11.0",
+    "react": "^18.2.0",
+    "reactdom": "^2.0.0"
+  }
+}
