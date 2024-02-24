@@ -17,6 +17,8 @@ const Title = () => <h1 id="heading">This is my paragraph title</h1>;
 const Paragraph = () => (
   <div id="parent">
             <Title />
+            {Title()}
+            <Title></Title>
             <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, minima
             velit sapiente sunt error, voluptatem, doloribus obcaecati laudantium sint
