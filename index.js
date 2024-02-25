@@ -12,6 +12,9 @@ React.createElement("div",{id:"child2"},[React.createElement("h1",{},"main toh c
 
 //component : just some normal js function which returns some jsx code or react object
 // componet's first letter must be a capital one
+const Elem=<p>This is <span style={{ color: 'red' }}>red</span> word in a paragraph.</p>
+console.log(Elem)
+
 const Title = () => <h1 id="heading">This is my paragraph title</h1>;
 
 const Paragraph = () => (
@@ -19,6 +22,7 @@ const Paragraph = () => (
             <Title />
             {Title()}
             <Title></Title>
+            {Elem}
             <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, minima
             velit sapiente sunt error, voluptatem, doloribus obcaecati laudantium sint
