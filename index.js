@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 //large restaurant object taken from swiggy website
-const restaurants= [
+const restaurantList= [
   {
     "info": {
       "id": "223162",
@@ -1876,6 +1876,7 @@ const restaurants= [
     }
   }
 ]
+
 
 
 const Header = () => {
