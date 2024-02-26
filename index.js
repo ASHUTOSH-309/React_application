@@ -1,33 +1,72 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-/* 
-const structure=React.createElement("div",{id:"parent"},
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://e7.pngegg.com/pngimages/47/533/png-clipart-swiggy-office-business-online-food-ordering-delivery-bangalore-business-food-text-thumbnail.png"
+          alt="logo image is here"
+        />
+      </div>
 
-[React.createElement("div",{id:"child1"},[React.createElement("h1",{},"kaun hu mai"),React.createElement("h2",{},"tu kaun hai be")]),
-React.createElement("div",{id:"child2"},[React.createElement("h1",{},"main toh child 2 hu bc"),React.createElement("h2",{},"mai tera chota bhai hu child 2 siblings yo")])]
+      <div className="navItems">
+        <ul>
+          <li>home</li>
+          <li>About us</li>
+          <li>contact</li>
+          <li>cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+const RestaurantCard = () => {
+  return (
+  
+  <div className="restaurant-card">
 
 
-) */
+<div className="card-image">
+    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/535fc9f9c135f7982317bbb6a64a1ffc" alt="it's here" />
+</div>   
 
-//component : just some normal js function which returns some jsx code or react object
-// componet's first letter must be a capital one
-const Title = () => <h1 id="heading">This is my paragraph title</h1>;
+<h3>VEG FAST FOOD</h3>
+<h4>chinese,south indian,north-indian</h4>
+<h4>40 minutes</h4>
+<h4>400 FOR TWO</h4>
 
-const Paragraph = () => (
-  <div id="parent">
-            <Title />
-            {Title()}
-            <Title></Title>
-            <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita, minima
-            velit sapiente sunt error, voluptatem, doloribus obcaecati laudantium sint
-            saepe odio numquam nesciunt hic tenetur pariatur aliquam maiores!
-            Voluptatum, maiores!
-            </p>
-  </div>
-);
+
+
+  </div>)
+};
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">SEARCH</div>
+
+      <div className="res-container">//restaurant cards
+      
+      <RestaurantCard />
+      
+      </div>
+    </div>
+  );
+};
+
+const AppLayout = () => {
+  return (
+    <div className="App">
+      <Header />
+      <Body />
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Paragraph />);
+root.render(<AppLayout />);
