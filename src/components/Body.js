@@ -1,29 +1,58 @@
-import RestaurantCard from "./RestaurantCard.js";
-import { restaurantList } from "../utils/constants.js";
+import RestaurantCard from "./RestaurantCard.js"; // default export=> simple import
+import { restaurantList } from "../utils/constants.js"; // named export => kavach import
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 /* const [resList, setresList] = useState(restaurantList); */
 
 export const Body = () => {
-
   const [resList, setresList] = useState(restaurantList);
+
+  useEffect(() => {
+
+    console.log("use effect called")
+  }, []);
 
   return (
     <div className="body">
       <div className="search">SEARCH</div>
 
       <div className="filter-btn">
+        <button
+          onClick={() => {
+            const filteredList = restaurantList.filter(
+              (restaurant) => restaurant.info.avgRating >= 4.2
+            );
+            console.log(filteredList);
+            setresList(filteredList);
+          }}
+        >
+          Filter restaurants 4.2
+        </button>
 
+        <button
+          onClick={() => {
+            const filteredList = restaurantList.filter(
+              (restaurant) => restaurant.info.avgRating >= 4.4
+            );
+            console.log(filteredList);
+            setresList(filteredList);
+          }}
+        >
+          Filter restaurants 4.4
+        </button>
 
-        <button  onClick={() => {
-          const filteredList = restaurantList.filter((restaurant) => restaurant.info.avgRating >= 4.6 );
-          console.log(filteredList)
-          setresList(filteredList) 
-
-        }}>Filter restaurants</button>
-
-
+        <button
+          onClick={() => {
+            const filteredList = restaurantList.filter(
+              (restaurant) => restaurant.info.avgRating >= 4.6
+            );
+            console.log(filteredList);
+            setresList(filteredList);
+          }}
+        >
+          Filter restaurants 4.6
+        </button>
       </div>
 
       <div className="res-container">
