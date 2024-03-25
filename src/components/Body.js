@@ -36,8 +36,8 @@ export const Body = () => {
     
     )
   }
-
-  return (
+// conditional rendering 
+  return resList.length === 0? (<Shimmer />): (
     <div className="body">
       <div className="search">SEARCH</div>
 
