@@ -8,6 +8,8 @@ import { TAB_LOGO } from "./utils/constants.js";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Contact from "./components/Contact.js";
 import Error from "./components/Error.js";
+import RestaurantCard from "./components/RestaurantCard.js";
+import RestaurantMenu from "./components/RestaurantMenu.js";
 
 //large restaurant object taken from swiggy website
 // To access
@@ -51,6 +53,10 @@ const appRouter = createBrowserRouter([
           {
             path: "/contact",
             element: <Contact />,
+          },
+          {
+            path: "/restaurant/:resId",
+            element: <RestaurantMenu />,
           },
      
     ],
