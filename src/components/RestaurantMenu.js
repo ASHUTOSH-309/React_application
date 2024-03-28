@@ -34,7 +34,7 @@ const {resId}=useParams();
   
     const {cards}=resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR;
     const { itemCards } =
-    resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+    resInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card;
 
   return resInfo === null ? (
     <Shimmer />
