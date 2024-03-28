@@ -3,6 +3,7 @@ import { restaurantList } from "../utils/constants.js"; // named export => kavac
 
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer.js";
+import { Link } from "react-router-dom";
 /* const [resList, setresList] = useState(restaurantList); */
 
 export const Body = () => {
@@ -63,13 +64,18 @@ export const Body = () => {
       </button>
 
       <div className="res-container">
+        
         {filteredRestaurant.map((restaurant, i) => (
+          
+          <Link to={"/restaurant/"+restaurant.info.id}  key={restaurant.info.id}>
           <RestaurantCard
-            restaurant={filteredRestaurant[i]}
-            //initially this loop was running same number of times as there were elements in resList but we were passing wrong props to the Restaurantcard component
-            key={restaurant.info.id}
+            restaurant={filteredRestaurant[i]} 
           />
+          </Link>
         ))}
+
+
+
       </div>
     </div>
   );
