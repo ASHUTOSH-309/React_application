@@ -1532,3 +1532,5 @@ export const LOGO_URL="https://e7.pngegg.com/pngimages/47/533/png-clipart-swiggy
 export const CLOUDINARY_IMAGE="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"
 
 export const TAB_LOGO="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/6e04be27387483a7c00444f8e8241108"
+
+export const MENU_API="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=26.8909295&lng=75.7916167&restaurantId="
